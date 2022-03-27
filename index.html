@@ -1,0 +1,106 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="author" content="Zhiqiang Hu">
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/black.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+	</head>
+	<style>
+		li {font-size: 30px}
+		p {font-size: 40px}
+		b {color: orange}
+	</style>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<img src="https://images.squarespace-cdn.com/content/v1/512b3ac1e4b01fa6748fff20/1453215651163-LM25YOLIRLABV1SPBWRF/Misleading+headers?format=1500w">
+				</section>
+				<section>
+					<h3>What is it?</h3>
+					<p style="text-align: center"> This is a snippet of a full graphic, and is based on a recent peer
+						reviewed article which analyzed “79 studies on the effects of stress and the human body”.
+						This visualization shows how the work place stressors relate to physical symptoms.</p>
+					<p style="font-size: 20px">Source https://visual.ly/community/Infographics/health/effects-work-stress-your-body</p>
+				</section>
+
+				<section>
+					<h3>Issues</h3>
+					<p style="text-align: left">Data Issue:</p>
+					<ul>
+						<li>There is no <b>exact value</b> in the visualization. The horizontal bar doesn't show the exact value of the correlation between work place stressors and physical symptoms. </li>
+					</ul>
+					<p style="text-align: left">Idiom Issue:</p>
+					<ul>
+						<li>The horizontal bar is showing the <b>volume</b> of the occurrence of each symptom relative to the workplace stressor.</li>
+						<li>There is a relationship between the symptom and the stressor, but labeling the column header as <b>Relationship</b> is both confusing and misleading.</li>
+						<li>The column title should clearly state the unit of measure (e.g. count, sum of, % of, etc)</li>
+					</ul>
+				</section>
+				<section>
+					<h3>Possible Solutions</h3>
+					<ul>
+						<li>The column title can be <b>Correlation</b> and the column title should clearly state the unit of measure.</li>
+						<li>In this case the horizontal bar chart was the right choice, we can add the exact value to make it clear.</li>
+					</ul>
+				</section>
+
+				<section><img src="https://assets.website-files.com/60078f9b9c5ea6f60974b74b/61bdf49e384b99811891b691_Blog%2049.8..png" width="120%" height="120%"> </section>
+
+				<section>
+					<h3>What is it?</h3>
+					<p style="text-align: center"> This is a 3D model to show the correlation of the CpG island hypermethylation
+						and human cancer. There are three variables, the percentage of methylation, the human organs, and the gene segments.</p>
+				</section>
+
+				<section>
+					<h3>Issues</h3>
+					<p style="text-align: left">Idiom Issue:</p>
+					<ul>
+						<li>The graph involves <b>too many variables</b> which makes it difficult for the viewer to comprehend it immediately.</li>
+						<li>The 3D design has resulted in <b>undue complexity</b> wherein some bars are simply seemed to be hidden behind those in the front</li>
+						<li>It is nearly impossible to distinguish the percentage of each bar.</li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>Possible Solutions</h3>
+					<ul>
+						<li>Make the visualization <b>interactive</b>. If we can rotate the chart to view from different directions and click to check the exact value of each bar,
+							the visualization can be better.</li>
+						<li>In this case, we can use a <b>table</b> with raw header Organ and column header Gene Segment, the value in table is the percentage of methylation.
+							Moreover, we can use colors to indicate different extents of correlation.</li>
+					</ul>
+				</section>
+
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>
